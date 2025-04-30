@@ -5,7 +5,7 @@ Connecting to a running Linux instance using an SSH client requires a public/pri
 
 Instructions
 1. If you do not already have PuTTYgen, download the PuTTYgen executable from the following link: 
-PuTTYgen
+PuTTYgen - https://the.earth.li/~sgtatham/putty/latest/w32/puttygen.exe
 , opens in a new tab.
 
 Note: 
