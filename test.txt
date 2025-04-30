@@ -1,1 +1,33 @@
-hi this is jnanesh
+Note: This step is only required for Windows users who do not have a default SSH client.
+If you're using macOS, Linux, or the latest build of Windows 10 or Windows 11, you can use the downloaded PEM file directly — in that case, skip this step and proceed to the next one.
+
+Connecting to a running Linux instance using an SSH client requires a public/private key pair. Older builds of Windows 10 (prior to the April 2018 Update) and earlier do not include a built-in SSH client. PuTTY is a commonly used SSH client that is free to download and use. However, PuTTY does not support the PEM (Privacy Enhanced Mail) key format used by AWS. Therefore, the PEM key file must be converted to the PPK (PuTTY Private Key) format. Fortunately, PuTTYgen — also free to download and use — can convert PEM files to PPK format.
+
+Instructions
+1. If you do not already have PuTTYgen, download the PuTTYgen executable from the following link: 
+PuTTYgen
+, opens in a new tab.
+
+Note: 
+QA lab platform enterprise accounts also provide an enterprise bridge feature
+, opens in a new tab that allows you to bypass corporate network and software installation policies that may otherwise prevent you from completing this lab step.
+
+2. Start PuTTYgen. (no installation is required)
+
+3. Click Load and browse to the location of the private key file that you want to convert (for example keypair.pem). By default, PuTTYgen displays only files with a .ppk extension. You'll need to change the drop-down adjacent to File name to All Files in order to see your PEM file:
+
+
+
+
+4. Select your .pem key file and click Open. PuTTYgen displays the following message:
+
+
+
+5. Click OK. PuTTYgen displays a dialog with information about the key you loaded, including the public key and the fingerprint.
+
+6. Click Save private key to save the key in PuTTY's format. Do NOT select a passphrase. (Additional security is not required.) Be sure to save your private key somewhere secure.
+
+Summary
+Now you are ready to use PuTTY for connecting to the running Linux instance created in a previous lab step. The PuTTY SSH client will use the key pair format it requires for the private key to connect to the instance. The running Linux instance already has the public key on it.
+
+Report lab step feedback
